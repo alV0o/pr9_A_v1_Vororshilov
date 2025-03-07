@@ -16,6 +16,15 @@ class Drama(var empName: String, var empAuthor: String, var empYear: Int, var em
                 println("Неверное ограничение. Введите заново")
                 AgeForReading()
             }
+            else->{
+                when(ageLimit){
+                    1-> ageLimit = 18
+                    2->ageLimit = 16
+                    3->ageLimit = 12
+                    4->ageLimit = 6
+                    5->ageLimit = 0
+                }
+            }
         }
 
         when{
