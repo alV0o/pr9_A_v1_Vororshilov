@@ -23,6 +23,7 @@ fun main(){
             else ->{
                 println("Введите свой возраст")
                 dramaBook.age = readLine()!!.toInt()
+                dramabook.AgeForReading()
             }
         }
 
