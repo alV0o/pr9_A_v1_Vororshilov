@@ -48,18 +48,25 @@ open class Book(var name: String, var author: String, var year: Int, var countPa
         val answer = readLine()!!.toInt()
         var priceOnePage = 0.0
 
-        when(answer){
-            1 -> priceOnePage = 1.5
-            2 -> priceOnePage = 0.5
-            3 -> priceOnePage = 0.2
+       when(answer){
+            1 -> {
+                priceOnePage = 1.5
+                println("Себестоимость этой книги = ${priceOnePage*countPages}р")
+            }
+            2 -> {
+                priceOnePage = 0.5
+                println("Себестоимость этой книги = ${priceOnePage*countPages}р")
+            }
+            3 -> {
+                priceOnePage = 0.2
+                println("Себестоимость этой книги = ${priceOnePage*countPages}р")
+            }
             else -> {
                 println("Неверный выбор")
                 println("Выберите заново")
                 PriceDueToMaterial()
             }
         }
-
-        println("Себестоимость этой книги = ${priceOnePage*countPages}р")
     }
 
     open fun TypeOfBook(){
