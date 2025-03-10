@@ -25,7 +25,11 @@ open class Book(var name: String, var author: String, var year: Int, var countPa
                 antiqueMarkup = price/50
                 println("Наценка за старость = ${String.format("%.2f", antiqueMarkup)}p")
             }
-            else -> println("Неверный год")
+            else -> {
+                println("Неверный год")
+                println("Введите заново")
+                OldBookMarkup()
+            }
         }
     }
 
