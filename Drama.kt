@@ -25,12 +25,11 @@ class Drama(var empName: String, var empAuthor: String, var empYear: Int, var em
                     4->ageLimit = 6
                     5->ageLimit = 0
                 }
+                when{
+                    (age>=ageLimit) -> println("Приятного прочтения")
+                    else -> println("Вам рано такое читать!")
+                }
             }
-        }
-
-        when{
-            (age>=ageLimit) -> println("Приятного прочтения")
-            else -> println("Вам рано такое читать!")
         }
     }
 
